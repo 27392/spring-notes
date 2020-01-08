@@ -1,6 +1,7 @@
 package cn.haohaoli.spring.tx.service;
 
 import cn.haohaoli.spring.tx.Config;
+import cn.haohaoli.spring.tx.dao.AccountDao;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -20,13 +21,17 @@ public class AccountServiceTest {
 //        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("spring-tx.xml");
         AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(Config.class);
         AccountService accountService = applicationContext.getBean(AccountService.class);
-        accountService.asyncSave();
+//        AccountDao accountDao = applicationContext.getBean(AccountDao.class);
+//        accountDao.save2();
+
+        accountService.asyncSave1();
+        /*accountService.asyncSave();
 
         try {
             TimeUnit.SECONDS.sleep(60);
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 
 

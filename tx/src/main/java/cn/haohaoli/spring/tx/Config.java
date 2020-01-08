@@ -8,6 +8,7 @@ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import javax.sql.DataSource;
 
@@ -17,6 +18,7 @@ import javax.sql.DataSource;
  */
 @Configuration
 @ComponentScan(value = "cn.haohaoli.spring.tx")
+@EnableTransactionManagement
 public class Config {
 
     @Bean
