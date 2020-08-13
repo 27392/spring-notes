@@ -12,6 +12,7 @@
     <modules>
         <module>ioc</module>
         <module>tx</module>
+        <module>demo</module>
     </modules>
 
     <properties>
@@ -31,6 +32,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -48,6 +50,13 @@
                 <version>1.18.10</version>
                 <scope>provided</scope>
             </dependency>
+
+            <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.2.3</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -59,7 +68,7 @@
                 <enabled>true</enabled>
             </releases>
             <snapshots>
-                <enabled>true</enabled>
+                <enabled>false</enabled>
             </snapshots>
         </repository>
     </repositories>
